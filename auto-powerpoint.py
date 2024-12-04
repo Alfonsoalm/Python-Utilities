@@ -71,7 +71,7 @@ if __name__ == "__main__":
     folder_path = "imagenes"  # Cambia esto por la ruta real
 
     # Nombre del archivo de salida
-    ppt_path = "presentacion_imagenes.pptx"
+    ppt_path = "documentos_generados/pptx/presentacion_imagenes.pptx"
 
     # Crear la presentación
     create_presentation_with_images(folder_path, ppt_path)
