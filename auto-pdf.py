@@ -3,7 +3,7 @@ import argparse
 from PyPDF2 import PdfReader, PdfWriter, PdfMerger
 
 def merge_pdfs_from_folder(folder_path, output_file):
-    """Combina todos los PDFs en una carpeta en un único archivo."""
+    """Combina todos los PDFs de una carpeta en un único archivo."""
     merger = PdfMerger()
     try:
         # Obtener todos los archivos PDF de la carpeta y ordenarlos
@@ -49,28 +49,32 @@ def merge_selected_pages(input_pdf, page_list, output_pdf):
     except Exception as e:
         print(f"Error al procesar el PDF: {e}")
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Combina o selecciona páginas de PDFs desde la línea de comandos.")
     
     subparsers = parser.add_subparsers(dest="command", help="Subcomandos disponibles")
 
     # Subcomando para combinar PDFs desde una carpeta
-    combine_parser = subparsers.add_parser("combine", help="Combina todos los PDFs de una carpeta.")
-    combine_parser.add_argument("folder_path", help="Ruta de la carpeta que contiene los PDFs.")
-    combine_parser.add_argument("output_pdf", help="Ruta del archivo PDF combinado de salida.")
+    combine = subparsers.add_parser("combine", help="Combina todos los PDFs de una carpeta.")
+    combine.add_argument("folder_path", help="Ruta de la carpeta que contiene los PDFs.")
+    combine.add_argument("output_pdf", help="Ruta del archivo PDF combinado de salida.")
 
     # Subcomando para combinar páginas seleccionadas
-    select_parser = subparsers.add_parser("select", help="Combina páginas específicas de un PDF.")
-    select_parser.add_argument("input_pdf", help="Ruta del archivo PDF de entrada.")
-    select_parser.add_argument("page_list", help="Lista de páginas a combinar, separadas por comas. Ejemplo: 1,3,5.")
-    select_parser.add_argument("output_pdf", help="Ruta del archivo PDF de salida.")
+    select = subparsers.add_parser("select", help="Combina páginas específicas de un PDF.")
+    select.add_argument("input_pdf", help="Ruta del archivo PDF de entrada.")
+    select.add_argument("page_list", help="Lista de páginas a combinar, separadas por comas. Ejemplo: 1,3,5.")
+    select.add_argument("output_pdf", help="Ruta del archivo PDF de salida.")
 
     args = parser.parse_args()
 
     if args.command == "combine":
         merge_pdfs_from_folder(args.folder_path, args.output_pdf)
+
     elif args.command == "select":
         page_list = list(map(int, args.page_list.split(",")))
+        print(page_list)
         merge_selected_pages(args.input_pdf, page_list, args.output_pdf)
+        
     else:
         parser.print_help()
