@@ -1,5 +1,5 @@
 ./data.json
 ./credentials.py
 ./imagenes
-documentos_generados/
-documentos_entrada/
+./documentos_entrada
+./documentos_entrada/
