@@ -50,6 +50,7 @@ def read_last_messages(contact_name, num_messages):
     print(f"Mensajes guardados en el archivo: {file_name}")
     driver.quit()
 
+
 def send_message_whatsapp(number=None, group=None, message=None, hour=None, minute=None):
     try:
         # Verifica si se debe programar el mensaje
@@ -97,6 +98,7 @@ def send_message_whatsapp(number=None, group=None, message=None, hour=None, minu
     except Exception as e:
         print(f"Ha ocurrido un error al enviar el mensaje de WhatsApp: {e}")
 
+
 def send_image_whatsapp(numero=None, group=None, imagen=None, mensaje=None, hora=None, minuto=None):
     try:
         # Verifica si se debe enviar a una hora específica
@@ -136,6 +138,7 @@ def send_image_whatsapp(numero=None, group=None, imagen=None, mensaje=None, hora
     except Exception as e:
         print(f"Ha ocurrido un error al enviar el mensaje de WhatsApp: {e}")
 
+
 if __name__ == "__main__":
     # Enviar mensaje por WhatsApp
     number = 34657289926
@@ -143,11 +146,9 @@ if __name__ == "__main__":
     try:
         # hour = None
         # minute = None
-
         # image = "imagen.jpg"
         # send_message_whatsapp(number = number, message = message, hour = hour, minute = minute)
         # send_image_whatsapp(number = number, image = image, message = message, hour = hour, minute = minute)
-        # Ejemplo de uso
         contact = "Antonia"
         n = 5
         read_last_messages(contact, n)
