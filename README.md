@@ -29,10 +29,8 @@ Scripts para gestionar archivos y carpetas, incluyendo eliminación de duplicado
   - Con prefijos o sufijos personalizados.
 
 ### **Uso**
-```bash
+```bash```
 python auto-file-manager.py
-
----
 
 ## **2. Manejo de Documentos Word y PDF**
 Automatización de tareas comunes con archivos Word y PDF, como generación de documentos, combinación de tablas, conversión a PDF y firma digital.
@@ -45,7 +43,7 @@ Automatización de tareas comunes con archivos Word y PDF, como generación de d
   - Combina tablas de múltiples archivos Word en un solo documento, con salida en Word o PDF.
 
 ### **Uso**
-```bash
+```bash```
 python auto-word.py
 python document-generator.py
 
@@ -65,7 +63,7 @@ Scripts para interactuar con WhatsApp Web, enviar mensajes o leer chats automát
   - Admite envío inmediato o programado.
 
 ### **Uso**
-```bash
+```bash```
 python auto-whatsapp.py
 
 
@@ -84,7 +82,7 @@ Gestión y automatización de correos electrónicos, como lectura, exportación 
   - Compatible con servidores SMTP como Gmail.
 
 ### **Uso**
-```bash
+```bash```
 python auto-email.py
 
 
@@ -98,7 +96,7 @@ Automatización para crear y editar presentaciones PowerPoint con imágenes.
   - Agrega imágenes a presentaciones existentes, posicionándolas en las diapositivas.
 
 ### **Uso**
-```bash
+```bash```
 python auto-powerpoint.py
 
 
@@ -112,7 +110,7 @@ Descarga y procesamiento de videos desde YouTube.
   - Integra audio y video en un único archivo `.mp4`.
 
 ### **Uso**
-```bash
+```bash```
 python auto-video.py
 
 ## **7. Automatización Web**
@@ -125,7 +123,7 @@ Scripts para interactuar con páginas web usando Selenium.
   - Guarda los datos extraídos en formatos como `.csv`.
 
 ### **Uso**
-```bash
+```bash```
 python auto-web.py
 
 ## **8. Combinación y Selección de PDFs**
@@ -138,7 +136,7 @@ Automatización para combinar y procesar archivos PDF, permitiendo unir document
   - Crea un nuevo archivo PDF con las páginas seleccionadas de un archivo existente.
 
 ### **Uso**
-```bash
+```bash```
 python auto-pdf.py combine <ruta_carpeta> <archivo_salida.pdf>
 python auto-pdf.py select <archivo_entrada.pdf> <lista_páginas> <archivo_salida.pdf>
 
@@ -155,7 +153,7 @@ Automatiza la creación de documentos a partir de plantillas y su procesamiento 
   - Aplica firmas digitales a los documentos PDF utilizando un certificado PFX.
 
 ### **Uso**
-```bash
+```bash```
 python document-generator.py
 
 
@@ -172,5 +170,5 @@ Interactúa automáticamente con WhatsApp Web para gestionar chats.
   - Envía imágenes acompañadas de mensajes personalizados.
 
 ### **Uso**
-```bash
+```bash```
 python auto-whatsapp.py
