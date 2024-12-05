@@ -36,7 +36,6 @@ driver.get(website)
 # Imprimir el DOM inicial de la página para depuración
 print("HTML inicial:")
 print(driver.page_source)
-
 try:
     # Abrir la página de inicio de sesión
     driver.get(website)

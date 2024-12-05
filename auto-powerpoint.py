@@ -2,6 +2,8 @@ import os
 from pptx import Presentation
 from pptx.util import Inches
 
+
+# === Funcion para crear o añadir a un powerpoint imagenes de una carpeta ===
 def create_presentation_with_images(folder_path, ppt_path):
     try:
         # Verificar si el archivo ya existe

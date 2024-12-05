@@ -2,6 +2,7 @@ import os
 import argparse
 from PyPDF2 import PdfReader, PdfWriter, PdfMerger
 
+# === Funcion para unir todos los pdf de una carpeta ===
 def merge_pdfs_from_folder(folder_path, output_file):
     """Combina todos los PDFs de una carpeta en un único archivo."""
     merger = PdfMerger()
@@ -27,6 +28,7 @@ def merge_pdfs_from_folder(folder_path, output_file):
     finally:
         merger.close()
 
+# === Funcion para unir paginas seleccionadas de un pdf  ===
 def merge_selected_pages(input_pdf, page_list, output_pdf):
     """Crea un nuevo PDF combinando solo las páginas especificadas de un archivo."""
     try:

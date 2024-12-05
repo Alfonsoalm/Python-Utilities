@@ -1,13 +1,14 @@
 import yt_dlp as youtube_dl
 import shutil
 
-# Verificar si ffmpeg está instalado
+# === Funcion para verificar formato ffmpeg ===
 def verificar_ffmpeg():
     if shutil.which("ffmpeg") is None:
         print("ERROR: ffmpeg no está instalado. Por favor instala ffmpeg para continuar.")
         return False
     return True
 
+# === Funcion para descargar video ===
 def descargar_video(url):
     try:
         if not verificar_ffmpeg():

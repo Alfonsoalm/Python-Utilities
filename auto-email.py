@@ -9,7 +9,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from credentials import username, password  # Credenciales de correo
 
-
+# === Funcion para enviar emails ===
 def send_email(to_email, subject, message, cc_email=None, bcc_email=None):
     """
     Envía un correo a un único destinatario con CC y BCC.
@@ -44,7 +44,7 @@ def send_email(to_email, subject, message, cc_email=None, bcc_email=None):
     except Exception as e:
         print(f"Error al enviar el correo: {e}")
 
-
+# === Funcion para enviar emails a varias personas ===
 def send_bulk_emails(to_emails, subject, message):
     """
     Envía un correo a múltiples destinatarios.
@@ -70,7 +70,8 @@ def send_bulk_emails(to_emails, subject, message):
     except Exception as e:
         print(f"Error al enviar correos: {e}")
 
-def save_messages_to_single_file(content_list, format, save_path):
+# === Funcion exportar los emails a un archivo con formato especificado ===
+def export_messages(content_list, format, save_path):
     """Guarda todos los mensajes en un solo archivo en el formato especificado."""
     if format == "txt":
         with open(f"{save_path}/emails.txt", "w", encoding="utf-8") as file:
@@ -106,6 +107,7 @@ def save_messages_to_single_file(content_list, format, save_path):
             doc.add_paragraph("-" * 80)
         doc.save(f"{save_path}/emails.docx")
 
+# === Funcion para leer emails ===
 def read_emails(username, password, number_emails, format="txt", filter_email=None, save_path="."):
     try:
         # Conectarse al servidor de Gmail
@@ -181,6 +183,7 @@ def read_emails(username, password, number_emails, format="txt", filter_email=No
 
 
 if __name__ == "__main__":
+    
     # read_emails(
     #     username=username,
     #     password=password,
@@ -189,7 +192,8 @@ if __name__ == "__main__":
     #     filter_email="",  # Filtrar por remitente
     #     save_path="./documentos_generados/docx"  # Directorio donde guardar los archivos
     # )
-        send_email(
+
+    send_email(
         to_email="catiloji66@gmail.com",
         subject="Correo de prueba automatico",
         message="Este es un mensaje de prueba automatico generado por Auto-pythona de Pied Piper Inc, CEO: Alfonso almenara",

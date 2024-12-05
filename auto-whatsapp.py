@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 
-
+# === Funcion leer ultimos mensajes de whatsapp ===
 def read_last_messages(contact_name, num_messages):
     # Configurar Chrome para usar el perfil existente
     chrome_options = Options()
@@ -50,7 +50,7 @@ def read_last_messages(contact_name, num_messages):
     print(f"Mensajes guardados en el archivo: {file_name}")
     driver.quit()
 
-
+# === Funcion para enviar mensajes de whatsapp a grupo o contacto ===
 def send_message_whatsapp(number=None, group=None, message=None, hour=None, minute=None):
     try:
         # Verifica si se debe programar el mensaje
@@ -98,7 +98,7 @@ def send_message_whatsapp(number=None, group=None, message=None, hour=None, minu
     except Exception as e:
         print(f"Ha ocurrido un error al enviar el mensaje de WhatsApp: {e}")
 
-
+# === Funcion para imagenes en mensajes de whatsapp a grupo o contacto ===
 def send_image_whatsapp(numero=None, group=None, imagen=None, mensaje=None, hora=None, minuto=None):
     try:
         # Verifica si se debe enviar a una hora específica
