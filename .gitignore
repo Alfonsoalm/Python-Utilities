@@ -1,7 +1,7 @@
 ./data.json
 ./credentials.py
-./imagenes/*
-./documentos_entrada/*
-./documentos_entrada/*
-./.venv/*
+imagenes/
+documentos_entrada/
+documentos_entrada/
+.venv/
 
